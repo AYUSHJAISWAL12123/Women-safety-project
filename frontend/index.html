@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheBridge - Women Safety App</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛡 SheBridge</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="./safety.html">Safety Map</a>
+            <a href="./profile.html">Profile</a>
+            <a href="./setting.html">Settings</a>
+            <span class="bell">🔔</span>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Your Safety Companion</h1>
+        <p>Empowering women with smart security solutions for peace of mind wherever you go.</p>
+
+        <button id="sosButton" class="sos-btn">SOS</button>
+        <p class="sos-text">Press the SOS button in case of emergency</p>
+
+        <div class="threat-detection">
+            <h2>Threat Detection</h2>
+            <div class="status-box">
+                <p><strong>AI Threat Detection</strong></p>
+                <p>Real-time analysis of your surroundings for potential threats</p>
+                <p><strong>Current Status:</strong> <span class="status-bar"></span> <span class="low-risk">Low Risk</span></p>
+                <p>Area appears safe. Continue to stay alert.</p>
+            </div>
+        </div>
+
+        
+    <div style="max-width: 900px; margin: auto;">
+        <h2 style="font-size: 24px; margin-bottom: 20px;">Key Features</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            
+            <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="font-size: 24px; color: #ff6b6b; margin-bottom: 10px;">📍</div>
+                <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Safety Map</div>
+                <div style="font-size: 14px; color: #555;">View safe routes, danger zones, and nearby safe spaces on an interactive map.</div>
+            </div>
+
+            <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="font-size: 24px; color: #ff6b6b; margin-bottom: 10px;">👥</div>
+                <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Trusted Contacts</div>
+                <div style="font-size: 14px; color: #555;">Add friends and family who will be alerted in case of emergency.</div>
+            </div>
+
+            <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="font-size: 24px; color: #ff6b6b; margin-bottom: 10px;">🚨</div>
+                <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Danger Alerts</div>
+                <div style="font-size: 14px; color: #555;">Receive alerts about unsafe areas based on real-time data analysis.</div>
+            </div>
+
+            <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="font-size: 24px; color: #ff6b6b; margin-bottom: 10px;">🛡️</div>
+                <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">AI Protection</div>
+                <div style="font-size: 14px; color: #555;">Advanced algorithms detect unusual patterns and potential threats.</div>
+            </div>
+
+            <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="font-size: 24px; color: #ff6b6b; margin-bottom: 10px;">⏳</div>
+                <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Safety Timer</div>
+                <div style="font-size: 14px; color: #555;">Set a timer for activities and get automatic check-ins.</div>
+            </div>
+
+            <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="font-size: 24px; color: #ff6b6b; margin-bottom: 10px;">📞</div>
+                <div style="font-size: 18px; font-weight: bold; margin-bottom: 5px;">Quick Dial</div>
+                <div style="font-size: 14px; color: #555;">One-tap calling to emergency services or trusted contacts.</div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

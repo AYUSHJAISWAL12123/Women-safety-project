@@ -1,0 +1,117 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 16px;
+}
+
+.bell {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Main Content */
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* SOS Button */
+.sos-btn {
+    background-color: red;
+    color: white;
+    padding: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sos-btn:hover {
+    background-color: darkred;
+}
+
+/* Threat Detection */
+.threat-detection {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.status-box {
+    text-align: left;
+}
+
+.status-bar {
+    display: inline-block;
+    width: 80%;
+    height: 5px;
+    background-color: lightgreen;
+}
+
+.low-risk {
+    color: green;
+    font-weight: bold;
+}
+
+/* Alerts */
+#alerts {
+    margin-top: 30px;
+    text-align: left;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#alertList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#alertList li {
+    background: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}

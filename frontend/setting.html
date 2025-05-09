@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f7fc;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+        }
+        .section {
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .section p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .slider {
+            width: 100%;
+        }
+        .toggle {
+            width: 40px;
+            height: 20px;
+            background: #ccc;
+            border-radius: 10px;
+            position: relative;
+            cursor: pointer;
+        }
+        .toggle::before {
+            content: "";
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: white;
+            border-radius: 50%;
+            top: 1px;
+            left: 2px;
+            transition: 0.3s;
+        }
+        input[type="checkbox"]:checked + .toggle {
+            background: #8a5af1;
+        }
+        input[type="checkbox"]:checked + .toggle::before {
+            transform: translateX(20px);
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Settings</h1>
+        <div class="section">
+            <h2>Notifications</h2>
+            <p>Configure how you receive alerts and notifications</p>
+            <div class="toggle-container">
+                <span>Safety Alerts</span>
+                <input type="checkbox" id="safety-alerts" checked>
+                <label class="toggle" for="safety-alerts"></label>
+            </div>
+            <div class="toggle-container">
+                <span>SOS Notifications</span>
+                <input type="checkbox" id="sos-notifications" checked>
+                <label class="toggle" for="sos-notifications"></label>
+            </div>
+            <div class="toggle-container">
+                <span>App Updates</span>
+                <input type="checkbox" id="app-updates" checked>
+                <label class="toggle" for="app-updates"></label>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Safety Settings</h2>
+            <p>Configure your safety preferences</p>
+            <label>Threat Detection Sensitivity</label>
+            <input type="range" class="slider" min="0" max="100" value="75">
+            <p>Higher sensitivity may result in more alerts but could include false positives.</p>
+            <div class="toggle-container">
+                <span>Location Tracking</span>
+                <input type="checkbox" id="location-tracking">
+                <label class="toggle" for="location-tracking"></label>
+            </div>
+            <div class="toggle-container">
+                <span>Share Safety Insights</span>
+                <input type="checkbox" id="safety-insights">
+                <label class="toggle" for="safety-insights"></label>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Privacy</h2>
+            <p>Control your privacy settings</p>
+            <div class="toggle-container">
+                <span>Profile Visibility</span>
+                <input type="checkbox" id="profile-visibility" checked>
+                <label class="toggle" for="profile-visibility"></label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
