@@ -1,7 +1,7 @@
 import twilio from "twilio";
 import dotenv from "dotenv";
 
-dotenv.config(); // ✅ Load environment variables
+dotenv.config();
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -10,7 +10,6 @@ const myPhoneNumber = process.env.MY_PHONE_NUMBER;
 
 const client = twilio(accountSid, authToken);
 
-// ✅ Function to Send SOS Alert via Twilio
 export function sendSOS(location) {
     const message = `🚨 SOS Alert! 🚨\nLocation: ${location.lat}, ${location.lng}\nPlease take immediate action!`;
 
