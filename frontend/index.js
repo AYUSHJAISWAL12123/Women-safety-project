@@ -1,13 +1,10 @@
 const socket = io("http://localhost:5000");
 
-// ✅ Check WebSocket Connection
 socket.on("connect", () => console.log("✅ Connected to WebSocket Server"));
 socket.on("disconnect", () => console.log("❌ Disconnected from WebSocket Server"));
 
-// ✅ SOS Button Click Event
 document.getElementById("sosButton").addEventListener("click", sendSOS);
 
-// ✅ Function to Send SOS
 function sendSOS() {
     if (!navigator.geolocation) {
         alert("⚠️ Geolocation not supported by your browser!");
@@ -18,10 +15,8 @@ function sendSOS() {
         const location = { lat: pos.coords.latitude, lng: pos.coords.longitude };
         console.log("📍 Sending SOS:", location);
 
-        // ✅ Send SOS alert via WebSocket
         socket.emit("sos-alert", { message: "Help Needed!", location });
 
-        // ✅ Send SOS alert via backend API
         fetch("http://localhost:5000/send-sos", { // Ensure correct URL
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -40,11 +35,9 @@ function sendSOS() {
     });
 }
 
-// ✅ Listen for SOS alerts
 socket.on("alert-received", (data) => {
     console.log("🔔 SOS Alert Received:", data);
-    
-    // ✅ Update UI with alert
+   
     const alertList = document.getElementById("alertList");
     const li = document.createElement("li");
     li.innerText = `${data.message} at Lat: ${data.location.lat}, Lng: ${data.location.lng}`;
