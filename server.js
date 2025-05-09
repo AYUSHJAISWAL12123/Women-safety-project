@@ -10,11 +10,9 @@ const io = new Server(server, {
     cors: { origin: "*" },
 });
 
-// ✅ Middleware (Apply these BEFORE defining routes)
 app.use(cors());
 app.use(express.json());
 
-// ✅ API Endpoint: Send SOS Alert
 app.post("/send-sos", (req, res) => {
     console.log("📩 Incoming SOS request:", req.body);
 
@@ -26,12 +24,10 @@ app.post("/send-sos", (req, res) => {
     res.json({ message: "✅ SOS Alert Sent!" });
 });
 
-// ✅ Test Route (Check if backend is running)
 app.get("/", (req, res) => {
     res.send("🚀 Women Safety App Backend is Running!");
 });
 
-// ✅ WebSocket for SOS Alerts
 io.on("connection", (socket) => {
     console.log(`✅ User Connected: ${socket.id}`);
 
@@ -45,5 +41,4 @@ io.on("connection", (socket) => {
     });
 });
 
-// ✅ Start Server
 server.listen(5000, () => console.log("🚀 Server running on port 5000"));
